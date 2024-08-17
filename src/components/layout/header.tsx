@@ -1,9 +1,18 @@
+'use client'
+
 import { HTMLAttributes } from 'react'
 import Link from 'next/link'
-// import { cn } from "@/lib/utils";
+import { usePathname } from 'next/navigation'
+
 interface HeaderProps extends HTMLAttributes<HTMLDivElement> {}
 
 export const Header = ({ className, ...props }: HeaderProps) => {
+
+  const pathname = usePathname()
+  const isAuthPage = pathname === '/sign-in' || pathname === '/sign-up';
+
+  if (isAuthPage) return null;
+
   return (
       <div className="flex flex-row items-center justify-center mx-5">
         <Link href="/">

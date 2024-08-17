@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import './globals.css'
 
 const inter = Inter({ subsets: ["latin"] });
@@ -14,8 +15,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  console.log("layout !!")
+
   return (
     <html lang="en">
+      {/* <Script
+        // strategy="beforeInteractive"
+        type="text/javascript"
+        src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NAVER_MAPS_CLIENT_ID}`}
+      ></Script> */}
+      {/* <div>this is layout com</div> */}
       <body className={inter.className}>{children}</body>
     </html>
   );
