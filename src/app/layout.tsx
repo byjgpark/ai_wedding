@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import './globals.css'
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,17 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  console.log("layout !!")
-
   return (
     <html lang="en">
-      {/* <Script
-        // strategy="beforeInteractive"
-        type="text/javascript"
-        src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NAVER_MAPS_CLIENT_ID}`}
-      ></Script> */}
-      {/* <div>this is layout com</div> */}
-      <body className={inter.className}>{children}</body>
+      <body className={cn("mt-4",inter.className)}>{children}</body>
     </html>
   );
 }

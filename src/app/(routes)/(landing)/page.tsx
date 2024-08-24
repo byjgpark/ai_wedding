@@ -1,11 +1,16 @@
 import * as React from "react";
-import { CarouselCards } from "../home/sections/carousel-cards";
+import { LoginInput } from "./components/login-inputs";
+import { LoginButton } from "./components/login-btns";
 
 const Page = async () => {
   return (
-    <main>
-      <div className="flex items-center justify-center mt-6">
-        <CarouselCards></CarouselCards>
+    <main className="flex items-center justify-center mt-6">
+      <div>
+        <h2 className="mb-4 text-center font-medium">AI-Wedding Login</h2>
+        <div>
+          <LoginInput></LoginInput>
+          <LoginButton></LoginButton>
+        </div>      
       </div>
     </main>
   );

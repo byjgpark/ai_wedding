@@ -5,9 +5,6 @@ import NaverMap from "./components/naver-map";
 const Page = async () => {
   return (
     <main>
-      <div className="flex items-center justify-center mt-6">
-        This is Map Page
-      </div>
       <NaverMap></NaverMap>
     </main>
   );

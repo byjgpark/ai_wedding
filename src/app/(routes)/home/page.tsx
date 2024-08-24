@@ -1,12 +1,10 @@
 import * as React from "react";
-import { CarouselCards } from "./sections/carousel-cards";
+import { CarouselCards } from "./components/carousel-cards";
 
-const Page = async () => {
+const Page = () => {
   return (
     <main>
-      <div className="flex items-center justify-center mt-6">
         <CarouselCards></CarouselCards>
-      </div>
     </main>
   );
 };
